@@ -11,7 +11,9 @@ flower(X):-
 	middle(X,X),
         upper_lower(X),
 	bars(X),
-	!.%disallow backtracking, we're done here
+	!.% no backtracking, we're done here
+
+flower(0):-write('Bad teacher! No flowers for you..').
 
 upper_lower(X):-
 	space(X),
